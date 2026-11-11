@@ -41,14 +41,14 @@
   <div id="pantallaJuego2" style="display:none">
     <h1>Juego de parejas</h1>
     <div id="tablero">
-      <button class="carta" id="carta1">?</button>
-      <button class="carta" id="carta2">?</button>
-      <button class="carta" id="carta3">?</button>
-      <button class="carta" id="carta4">?</button>
-      <button class="carta" id="carta5">?</button>
-      <button class="carta" id="carta6">?</button>
+      <button class="carta" id="carta1" onclick="girarCarta(1)">?</button>
+      <button class="carta" id="carta2" onclick="girarCarta(2)">?</button>
+      <button class="carta" id="carta3" onclick="girarCarta(3)">?</button>
+      <button class="carta" id="carta4" onclick="girarCarta(4)">?</button>
+      <button class="carta" id="carta5" onclick="girarCarta(5)">?</button>
+      <button class="carta" id="carta6" onclick="girarCarta(6)">?</button>
     </div>
-    <button onclick="irAExplicacion3()">Lo conseguí</button>
+    <button id="botonLoConsegui" style="display:none" onclick="irAExplicacion3()">Lo conseguí</button>
   </div>
 
   <div id="pantallaExplicacion3" style="display:none">
@@ -114,37 +114,37 @@
     <h1>Preguntas sobre las imágenes del juego de parejas</h1>
 
     <div class="pregunta" id="pregunta1Juego4">
-      <p>¿Cuál era la imagen de la manzana?</p>
-      <input type="radio" id="opcion1Pregunta1Juego4" name="respuestaPregunta1Juego4" value="imagen1">
-      <label for="opcion1Pregunta1Juego4"><img src="imagenes/imagen1.png" alt="Imagen 1"></label>
-      <input type="radio" id="opcion2Pregunta1Juego4" name="respuestaPregunta1Juego4" value="imagen2">
-      <label for="opcion2Pregunta1Juego4"><img src="imagenes/imagen2.png" alt="Imagen 2"></label>
-      <input type="radio" id="opcion3Pregunta1Juego4" name="respuestaPregunta1Juego4" value="imagen3">
-      <label for="opcion3Pregunta1Juego4"><img src="imagenes/imagen3.png" alt="Imagen 3"></label>
+      <p>¿Cuál de estas imágenes salió en el juego de parejas?</p>
+      <input type="radio" id="opcion1Pregunta1Juego4" name="respuestaPregunta1Juego4" 	value="">
+      <label for="opcion1Pregunta1Juego4"><img src="imagenes/imagen1.jpg" alt="Imagen 1" 	width="100"></label>
+      <input type="radio" id="opcion2Pregunta1Juego4" name="respuestaPregunta1Juego4" 	value="">
+      <label for="opcion2Pregunta1Juego4"><img src="imagenes/imagen1.jpg" alt="Imagen 2" 	width="100"></label>
+      <input type="radio" id="opcion3Pregunta1Juego4" name="respuestaPregunta1Juego4" 	value="">
+      <label for="opcion3Pregunta1Juego4"><img src="imagenes/imagen1.jpg" alt="Imagen 3" 	width="100"></label>
     </div>
 
     <div class="pregunta" id="pregunta2Juego4">
-      <p>¿Cuál era la imagen del coche?</p>
-      <input type="radio" id="opcion1Pregunta2Juego4" name="respuestaPregunta2Juego4" value="imagen4">
-      <label for="opcion1Pregunta2Juego4"><img src="imagenes/imagen4.png" alt="Imagen 1"></label>
-      <input type="radio" id="opcion2Pregunta2Juego4" name="respuestaPregunta2Juego4" value="imagen5">
-      <label for="opcion2Pregunta2Juego4"><img src="imagenes/imagen5.png" alt="Imagen 2"></label>
-      <input type="radio" id="opcion3Pregunta2Juego4" name="respuestaPregunta2Juego4" value="imagen6">
-      <label for="opcion3Pregunta2Juego4"><img src="imagenes/imagen6.png" alt="Imagen 3"></label>
+      <p>¿Cuál de estas imágenes salió en el juego de parejas?</p>
+      <input type="radio" id="opcion1Pregunta2Juego4" name="respuestaPregunta2Juego4" 	value="">
+      <label for="opcion1Pregunta2Juego4"><img src="imagenes/imagen1.jpg" alt="Imagen 1" 	width="100"></label>
+      <input type="radio" id="opcion2Pregunta2Juego4" name="respuestaPregunta2Juego4" 	value="">
+      <label for="opcion2Pregunta2Juego4"><img src="imagenes/imagen1.jpg" alt="Imagen 2" 	width="100"></label>
+      <input type="radio" id="opcion3Pregunta2Juego4" name="respuestaPregunta2Juego4" 	value="">
+      <label for="opcion3Pregunta2Juego4"><img src="imagenes/imagen1.jpg" alt="Imagen 3" 	width="100"></label>
     </div>
 
     <div class="pregunta" id="pregunta3Juego4">
-      <p>¿Cuál era la imagen del paisaje?</p>
-      <input type="radio" id="opcion1Pregunta3Juego4" name="respuestaPregunta3Juego4" value="imagen7">
-      <label for="opcion1Pregunta3Juego4"><img src="imagenes/imagen7.png" alt="Imagen 1"></label>
-      <input type="radio" id="opcion2Pregunta3Juego4" name="respuestaPregunta3Juego4" value="imagen8">
-      <label for="opcion2Pregunta3Juego4"><img src="imagenes/imagen8.png" alt="Imagen 2"></label>
-      <input type="radio" id="opcion3Pregunta3Juego4" name="respuestaPregunta3Juego4" value="imagen9">
-      <label for="opcion3Pregunta3Juego4"><img src="imagenes/imagen9.png" alt="Imagen 3"></label>
+      <p>¿Cuál de estas imágenes salió en el juego de parejas?</p>
+      <input type="radio" id="opcion1Pregunta3Juego4" name="respuestaPregunta3Juego4" 	value="">
+      <label for="opcion1Pregunta3Juego4"><img src="imagenes/imagen1.jpg" alt="Imagen 1" 	width="100"></label>
+      <input type="radio" id="opcion2Pregunta3Juego4" name="respuestaPregunta3Juego4" 	value="">
+      <label for="opcion2Pregunta3Juego4"><img src="imagenes/imagen1.jpg" alt="Imagen 2" 	width="100"></label>
+      <input type="radio" id="opcion3Pregunta3Juego4" name="respuestaPregunta3Juego4" 	value="">
+      <label for="opcion3Pregunta3Juego4"><img src="imagenes/imagen1.jpg" alt="Imagen 3" 	width="100"></label>
     </div>
 
-    <button onclick="irAPuntuacion()">Ver mi puntuación</button>
-  </div>
+    <button onclick="terminarJuego4()">Ver mi puntuación</button>
+  	</div>
 
   <div id="pantallaPuntuacion" style="display:none">
     <h1>Puntuación</h1>
@@ -186,6 +186,15 @@
     var ciudadElegida="";
     var objetoElegido="";
     var precioElegido="";
+    var imagenesJuego2=["imagen1.jpg","imagen2.png","imagen3.jpg","imagen4.png","imagen5.jpg"];
+    var cartasBarajadas=[];
+    var imagenesUsadas=[];
+    var imagenesNoUsadas=[];
+    var cartaAbierta=0;
+    var segundaCartaAbierta=0;
+    var prohibePulsarMasCartas=false;
+    var intentosRealizados=0;
+    var parejasEncontradas=0;
 
     function numeroAleatorio(maximo){
       return Math.floor(Math.random()*maximo);
@@ -241,6 +250,126 @@
       prepararPregunta(4,precios,precioElegido);
     }
 
+function prepararJuego2(){
+  var disponibles=imagenesJuego2.slice();
+  var elegidas=[];
+  for(var i=0;i<3;i=i+1){
+    var posicion=numeroAleatorio(disponibles.length);
+    elegidas.push(disponibles[posicion]);
+    disponibles.splice(posicion,1);
+  }
+  imagenesUsadas=elegidas;
+  imagenesNoUsadas=disponibles;
+  cartasBarajadas=elegidas.concat(elegidas);
+
+  for(var j=cartasBarajadas.length-1;j>0;j=j-1){
+    var k=numeroAleatorio(j+1);
+    var auxiliar=cartasBarajadas[j];
+    cartasBarajadas[j]=cartasBarajadas[k];
+    cartasBarajadas[k]=auxiliar;
+  }
+
+  cartaAbierta=0;
+  segundaCartaAbierta=0;
+  prohibePulsarMasCartas=false;
+  intentosRealizados=0;
+  parejasEncontradas=0;
+  document.getElementById("botonLoConsegui").style.display="none";
+
+  for(var n=1;n<=6;n=n+1){
+    var carta=document.getElementById("carta"+n);
+    carta.textContent="?";
+    carta.disabled=false;
+  }
+}
+
+function girarCarta(numeroCarta){
+  if(prohibePulsarMasCartas===true||numeroCarta===cartaAbierta){
+    return;
+  }
+  var carta=document.getElementById("carta"+numeroCarta);
+  var archivo=cartasBarajadas[numeroCarta-1];
+  carta.innerHTML='<img src="imagenes/'+archivo+'" alt="Carta '+numeroCarta+'" width="100">';
+
+  if(cartaAbierta===0){
+    cartaAbierta=numeroCarta;
+  }else{
+    intentosRealizados=intentosRealizados+1;
+    comprobarPareja(cartaAbierta,numeroCarta);
+  }
+}
+
+function comprobarPareja(primera,segunda){
+  if(cartasBarajadas[primera-1]===cartasBarajadas[segunda-1]){
+    document.getElementById("carta"+primera).disabled=true;
+    document.getElementById("carta"+segunda).disabled=true;
+    parejasEncontradas=parejasEncontradas+1;
+    cartaAbierta=0;
+    if(parejasEncontradas===3){
+      terminarJuego2();
+    }
+  }else{
+    segundaCartaAbierta=segunda;
+    prohibePulsarMasCartas=true;
+    setTimeout(taparCartasFalladas,2000);
+  }
+}
+
+function taparCartasFalladas(){
+  document.getElementById("carta"+cartaAbierta).textContent="?";
+  document.getElementById("carta"+segundaCartaAbierta).textContent="?";
+  cartaAbierta=0;
+  segundaCartaAbierta=0;
+  prohibePulsarMasCartas=false;
+}
+
+function terminarJuego2(){
+  document.getElementById("intentosJuego2").textContent=intentosRealizados;
+  document.getElementById("botonLoConsegui").style.display="block";
+}
+    function prepararPreguntaJuego4(numeroPregunta){
+      var correcta=imagenesUsadas[numeroPregunta-1];
+      var candidatas=imagenesNoUsadas.slice();
+      var opciones=[correcta];
+      for(var i=0;i<2;i=i+1){
+        var posicion=numeroAleatorio(candidatas.length);
+        opciones.push(candidatas[posicion]);
+        candidatas.splice(posicion,1);
+      }
+
+      var posicionCorrecta=numeroAleatorio(3);
+      var auxiliar=opciones[posicionCorrecta];
+      opciones[posicionCorrecta]=opciones[0];
+      opciones[0]=auxiliar;
+
+      for(var j=0;j<3;j=j+1){
+        var idRadio="opcion"+(j+1)+"Pregunta"+numeroPregunta+"Juego4";
+        var radio=document.getElementById(idRadio);
+        var imagen=document.querySelector('label[for="'+idRadio+'"] img');
+        radio.value=opciones[j];
+        radio.checked=false;
+        imagen.src="imagenes/"+opciones[j];
+      }
+    }
+
+    function prepararJuego4(){
+      prepararPreguntaJuego4(1);
+      prepararPreguntaJuego4(2);
+      prepararPreguntaJuego4(3);
+    }
+
+    function terminarJuego4(){
+      var aciertos=0;
+      for(var n=1;n<=3;n=n+1){
+        var marcada=document.querySelector('input[name="respuestaPregunta'+n+'Juego4"]:checked');
+        if(marcada!==null&&marcada.value===imagenesUsadas[n-1]){
+          aciertos=aciertos+1;
+        }
+      }
+      document.getElementById("correctasJuego4").textContent=aciertos;
+      irAPuntuacion();
+    }
+
     function irAExplicacion1(){
       var pantallaActual=document.getElementById("pantallaInicio");
       var pantallaSiguiente=document.getElementById("pantallaExplicacion1");
@@ -264,6 +393,7 @@
     }
 
     function irAJuego2(){
+      prepararJuego2();
       var pantallaActual=document.getElementById("pantallaExplicacion2");
       var pantallaSiguiente=document.getElementById("pantallaJuego2");
       pantallaActual.style.display="none";
@@ -293,6 +423,7 @@
     }
 
     function irAJuego4(){
+      prepararJuego4();
       var pantallaActual=document.getElementById("pantallaExplicacion4");
       var pantallaSiguiente=document.getElementById("pantallaJuego4");
       pantallaActual.style.display="none";
