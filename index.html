@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego de memoria</title>
+</head>
+<body>
+
+  <div id="pantallaInicio">
+    <h1>¿Por qué entrenar la mente?</h1>
+    <p>Entrenar la mente a diario puede hacer que tu cerebro esté activo y realentizar o posponer enfermedades neurodegenerativas.</p>
+    <h2>¿Jugamos?</h2>
+    <button onclick="irAExplicacion1()">Jugar</button>
+  </div>
+
+  <div id="pantallaExplicacion1" style="display:none">
+    <h1>Explicación del primer juego</h1>
+    <p>A continuación, al darle a "estoy preparado", va a aparecer un texto que deberás leer atentamente porque después harán preguntas sobre él. Intente leerlo lo más ágilmente posible porque se le medira el tiempo. En la pantalla del texto cuando acabes deberas pulsar "ya he terminado de leerlo"</p>
+    <h2>¿Preparado?</h2>
+    <button onclick="irAJuego1()">estoy preparado</button>
+  </div>
+
+  <div id="pantallaJuego1" style="display:none">
+    <h1>Texto</h1>
+    <p>Una persona llamada <span id="nombrePersona">Marta</span> tiene <span id="edadPersona">34</span> años y vive en la ciudad de <span id="ciudadPersona">Sevilla</span>. Acaba de comprar <span id="objetoComprado">una bicicleta</span> y le ha costado <span id="precioObjeto">250 euros</span>.</p>
+    <button onclick="irAExplicacion2()">He terminado de leer</button>
+  </div>
+
+  <div id="pantallaExplicacion2" style="display:none">
+    <h1>Explicación del segundo juego</h1>
+    <p>Vas a ver unas cartas tapadas. Hay parejas de cartas iguales.</p>
+    <ol>
+      <li>Toca una carta para verla.</li>
+      <li>Toca otra carta.</li>
+      <li>Busca las dos cartas iguales.</li>
+    </ol>
+    <h2>¿Preparado?</h2>
+    <button onclick="irAJuego2()">Estoy preparado</button>
+  </div>
+
+  <div id="pantallaJuego2" style="display:none">
+    <h1>Juego de parejas</h1>
+    <div id="tablero">
+      <button class="carta" id="carta1">?</button>
+      <button class="carta" id="carta2">?</button>
+      <button class="carta" id="carta3">?</button>
+      <button class="carta" id="carta4">?</button>
+      <button class="carta" id="carta5">?</button>
+      <button class="carta" id="carta6">?</button>
+    </div>
+    <button onclick="irAExplicacion3()">Lo conseguí</button>
+  </div>
+
+  <div id="pantallaExplicacion3" style="display:none">
+    <h1>Explicación del juego 3</h1>
+    <p>A continuación, cuando pulses "estoy listo", te saldrán preguntas del primer texto que has leído con varias opciones y deberás pulsar la correcta.</p>
+    <h2>¿Estás listo?</h2>
+    <button onclick="irAJuego3()">Estoy listo</button>
+  </div>
+
+  <div id="pantallaJuego3" style="display:none">
+    <h1>Preguntas sobre el texto</h1>
+
+    <div class="pregunta" id="pregunta1Juego3">
+      <p>¿Cómo se llamaba la persona?</p>
+      <input type="radio" id="opcion1Pregunta1Juego3" name="respuestaPregunta1Juego3" value="Marta">
+      <label for="opcion1Pregunta1Juego3">Marta</label><br>
+      <input type="radio" id="opcion2Pregunta1Juego3" name="respuestaPregunta1Juego3" value="Lucía">
+      <label for="opcion2Pregunta1Juego3">Lucía</label><br>
+      <input type="radio" id="opcion3Pregunta1Juego3" name="respuestaPregunta1Juego3" value="Elena">
+      <label for="opcion3Pregunta1Juego3">Elena</label>
+    </div>
+
+    <div class="pregunta" id="pregunta2Juego3">
+      <p>¿Cuántos años tenía?</p>
+      <input type="radio" id="opcion1Pregunta2Juego3" name="respuestaPregunta2Juego3" value="29">
+      <label for="opcion1Pregunta2Juego3">29</label><br>
+      <input type="radio" id="opcion2Pregunta2Juego3" name="respuestaPregunta2Juego3" value="34">
+      <label for="opcion2Pregunta2Juego3">34</label><br>
+      <input type="radio" id="opcion3Pregunta2Juego3" name="respuestaPregunta2Juego3" value="41">
+      <label for="opcion3Pregunta2Juego3">41</label>
+    </div>
+
+    <div class="pregunta" id="pregunta3Juego3">
+      <p>¿En qué ciudad vivía?</p>
+      <input type="radio" id="opcion1Pregunta3Juego3" name="respuestaPregunta3Juego3" value="Sevilla">
+      <label for="opcion1Pregunta3Juego3">Sevilla</label><br>
+      <input type="radio" id="opcion2Pregunta3Juego3" name="respuestaPregunta3Juego3" value="Valencia">
+      <label for="opcion2Pregunta3Juego3">Valencia</label><br>
+      <input type="radio" id="opcion3Pregunta3Juego3" name="respuestaPregunta3Juego3" value="Bilbao">
+      <label for="opcion3Pregunta3Juego3">Bilbao</label>
+    </div>
+
+    <div class="pregunta" id="pregunta4Juego3">
+      <p>¿Cuánto le costó?</p>
+      <input type="radio" id="opcion1Pregunta4Juego3" name="respuestaPregunta4Juego3" value="250 euros">
+      <label for="opcion1Pregunta4Juego3">250 euros</label><br>
+      <input type="radio" id="opcion2Pregunta4Juego3" name="respuestaPregunta4Juego3" value="10 euros">
+      <label for="opcion2Pregunta4Juego3">10 euros</label><br>
+      <input type="radio" id="opcion3Pregunta4Juego3" name="respuestaPregunta4Juego3" value="1 euro">
+      <label for="opcion3Pregunta4Juego3">1 euro</label>
+    </div>
+
+    <button onclick="terminarJuego3()">Terminado</button>
+  </div>
+
+  <div id="pantallaExplicacion4" style="display:none">
+    <h1>Preguntas sobre las imagenes del juego de parejas</h1>
+    <p>Cualdo pulses "Estoy listo" apareceran 3 preguntas sobre las imagenes que has vito en el juego de parejas y deberás pulsar sobre la opción correcta.</p>
+    <button onclick="irAJuego4()">Estoy listo</button>
+  </div>
+
+  <div id="pantallaJuego4" style="display:none">
+    <h1>Preguntas sobre las imágenes del juego de parejas</h1>
+
+    <div class="pregunta" id="pregunta1Juego4">
+      <p>¿Cuál era la imagen de la manzana?</p>
+      <input type="radio" id="opcion1Pregunta1Juego4" name="respuestaPregunta1Juego4" value="imagen1">
+      <label for="opcion1Pregunta1Juego4"><img src="imagenes/imagen1.png" alt="Imagen 1"></label>
+      <input type="radio" id="opcion2Pregunta1Juego4" name="respuestaPregunta1Juego4" value="imagen2">
+      <label for="opcion2Pregunta1Juego4"><img src="imagenes/imagen2.png" alt="Imagen 2"></label>
+      <input type="radio" id="opcion3Pregunta1Juego4" name="respuestaPregunta1Juego4" value="imagen3">
+      <label for="opcion3Pregunta1Juego4"><img src="imagenes/imagen3.png" alt="Imagen 3"></label>
+    </div>
+
+    <div class="pregunta" id="pregunta2Juego4">
+      <p>¿Cuál era la imagen del coche?</p>
+      <input type="radio" id="opcion1Pregunta2Juego4" name="respuestaPregunta2Juego4" value="imagen4">
+      <label for="opcion1Pregunta2Juego4"><img src="imagenes/imagen4.png" alt="Imagen 1"></label>
+      <input type="radio" id="opcion2Pregunta2Juego4" name="respuestaPregunta2Juego4" value="imagen5">
+      <label for="opcion2Pregunta2Juego4"><img src="imagenes/imagen5.png" alt="Imagen 2"></label>
+      <input type="radio" id="opcion3Pregunta2Juego4" name="respuestaPregunta2Juego4" value="imagen6">
+      <label for="opcion3Pregunta2Juego4"><img src="imagenes/imagen6.png" alt="Imagen 3"></label>
+    </div>
+
+    <div class="pregunta" id="pregunta3Juego4">
+      <p>¿Cuál era la imagen del paisaje?</p>
+      <input type="radio" id="opcion1Pregunta3Juego4" name="respuestaPregunta3Juego4" value="imagen7">
+      <label for="opcion1Pregunta3Juego4"><img src="imagenes/imagen7.png" alt="Imagen 1"></label>
+      <input type="radio" id="opcion2Pregunta3Juego4" name="respuestaPregunta3Juego4" value="imagen8">
+      <label for="opcion2Pregunta3Juego4"><img src="imagenes/imagen8.png" alt="Imagen 2"></label>
+      <input type="radio" id="opcion3Pregunta3Juego4" name="respuestaPregunta3Juego4" value="imagen9">
+      <label for="opcion3Pregunta3Juego4"><img src="imagenes/imagen9.png" alt="Imagen 3"></label>
+    </div>
+
+    <button onclick="irAPuntuacion()">Ver mi puntuación</button>
+  </div>
+
+  <div id="pantallaPuntuacion" style="display:none">
+    <h1>Puntuación</h1>
+
+    <div class="resultado" id="resultadoJuego1">
+      <h2>Juego 1</h2>
+      <p>Tiempo: <span id="tiempoJuego1">0</span> segundos</p>
+    </div>
+
+    <div class="resultado" id="resultadoJuego2">
+      <h2>Juego 2</h2>
+      <p>Intentos: <span id="intentosJuego2">0</span></p>
+    </div>
+
+    <div class="resultado" id="resultadoJuego3">
+      <h2>Juego 3</h2>
+      <p>Correctas: <span id="correctasJuego3">0</span> de <span id="totalJuego3">4</span></p>
+    </div>
+
+    <div class="resultado" id="resultadoJuego4">
+      <h2>Juego 4</h2>
+      <p>Correctas: <span id="correctasJuego4">0</span> de <span id="totalJuego4">3</span></p>
+    </div>
+
+    <button id="botonGuardar">Guardar puntuación</button>
+    <button onclick="jugarOtraVez()">¿Jugamos de nuevo?</button>
+  </div>
+
+  <script>
+
+    var nombres=["Marta","Lucía","Elena","Carmen","Pilar","Teresa","Rosa","Julia","Inés","Paula","Antonio","Manuel","José","Javier","Carlos","Miguel","Pedro","Luis","Andrés","Rafael"];
+    var edades=["24","27","29","32","34","36","39","41","44","46","49","52","55","58","61","63","66","69","72","75"];
+    var ciudades=["Sevilla","Valencia","Bilbao","Madrid","Barcelona","Zaragoza","Málaga","Granada","Córdoba","Salamanca","Valladolid","Burgos","León","Toledo","Alicante","Murcia","Santander","Oviedo","Pamplona","Cádiz"];
+    var objetos=["una bicicleta","unos zapatos","un abrigo","una lámpara","una radio","unas gafas","un paraguas","una cafetera","un sillón","una mesa","un televisor","una maleta","un reloj","una plancha","un bolso","una colcha","unos guantes","una olla","un ventilador","una mochila"];
+    var precios=["250 euros","60 euros","90 euros","35 euros","25 euros","120 euros","15 euros","40 euros","300 euros","180 euros","400 euros","70 euros","150 euros","30 euros","55 euros","45 euros","20 euros","50 euros","65 euros","80 euros"];
+
+    var nombreElegido="";
+    var edadElegida="";
+    var ciudadElegida="";
+    var objetoElegido="";
+    var precioElegido="";
+
+    function numeroAleatorio(maximo){
+      return Math.floor(Math.random()*maximo);
+    }
+
+    function elegirDistinto(lista,prohibido1,prohibido2){
+      var valor=lista[numeroAleatorio(lista.length)];
+      while(valor===prohibido1||valor===prohibido2){
+        valor=lista[numeroAleatorio(lista.length)];
+      }
+      return valor;
+    }
+
+    function generarTextoJuego1(){
+      nombreElegido=nombres[numeroAleatorio(nombres.length)];
+      edadElegida=edades[numeroAleatorio(edades.length)];
+      ciudadElegida=ciudades[numeroAleatorio(ciudades.length)];
+      var posicionObjeto=numeroAleatorio(objetos.length);
+      objetoElegido=objetos[posicionObjeto];
+      precioElegido=precios[posicionObjeto];
+
+      document.getElementById("nombrePersona").textContent=nombreElegido;
+      document.getElementById("edadPersona").textContent=edadElegida;
+      document.getElementById("ciudadPersona").textContent=ciudadElegida;
+      document.getElementById("objetoComprado").textContent=objetoElegido;
+      document.getElementById("precioObjeto").textContent=precioElegido;
+    }
+
+    function prepararPregunta(numeroPregunta,lista,correcta){
+      var distractor1=elegirDistinto(lista,correcta,correcta);
+      var distractor2=elegirDistinto(lista,correcta,distractor1);
+      var opciones=[correcta,distractor1,distractor2];
+
+      var posicion=numeroAleatorio(3);
+      var auxiliar=opciones[posicion];
+      opciones[posicion]=opciones[0];
+      opciones[0]=auxiliar;
+
+      for(var i=0;i<3;i=i+1){
+        var idRadio="opcion"+(i+1)+"Pregunta"+numeroPregunta+"Juego3";
+        var radio=document.getElementById(idRadio);
+        var etiqueta=document.querySelector('label[for="'+idRadio+'"]');
+        radio.value=opciones[i];
+        radio.checked=false;
+        etiqueta.textContent=opciones[i];
+      }
+    }
+
+    function prepararJuego3(){
+      prepararPregunta(1,nombres,nombreElegido);
+      prepararPregunta(2,edades,edadElegida);
+      prepararPregunta(3,ciudades,ciudadElegida);
+      prepararPregunta(4,precios,precioElegido);
+    }
+
+    function irAExplicacion1(){
+      var pantallaActual=document.getElementById("pantallaInicio");
+      var pantallaSiguiente=document.getElementById("pantallaExplicacion1");
+      pantallaActual.style.display="none";
+      pantallaSiguiente.style.display="block";
+    }
+
+    function irAJuego1(){
+      generarTextoJuego1();
+      var pantallaActual=document.getElementById("pantallaExplicacion1");
+      var pantallaSiguiente=document.getElementById("pantallaJuego1");
+      pantallaActual.style.display="none";
+      pantallaSiguiente.style.display="block";
+    }
+
+    function irAExplicacion2(){
+      var pantallaActual=document.getElementById("pantallaJuego1");
+      var pantallaSiguiente=document.getElementById("pantallaExplicacion2");
+      pantallaActual.style.display="none";
+      pantallaSiguiente.style.display="block";
+    }
+
+    function irAJuego2(){
+      var pantallaActual=document.getElementById("pantallaExplicacion2");
+      var pantallaSiguiente=document.getElementById("pantallaJuego2");
+      pantallaActual.style.display="none";
+      pantallaSiguiente.style.display="block";
+    }
+
+    function irAExplicacion3(){
+      var pantallaActual=document.getElementById("pantallaJuego2");
+      var pantallaSiguiente=document.getElementById("pantallaExplicacion3");
+      pantallaActual.style.display="none";
+      pantallaSiguiente.style.display="block";
+    }
+
+    function irAJuego3(){
+      prepararJuego3();
+      var pantallaActual=document.getElementById("pantallaExplicacion3");
+      var pantallaSiguiente=document.getElementById("pantallaJuego3");
+      pantallaActual.style.display="none";
+      pantallaSiguiente.style.display="block";
+    }
+
+    function irAExplicacion4(){
+      var pantallaActual=document.getElementById("pantallaJuego3");
+      var pantallaSiguiente=document.getElementById("pantallaExplicacion4");
+      pantallaActual.style.display="none";
+      pantallaSiguiente.style.display="block";
+    }
+
+    function irAJuego4(){
+      var pantallaActual=document.getElementById("pantallaExplicacion4");
+      var pantallaSiguiente=document.getElementById("pantallaJuego4");
+      pantallaActual.style.display="none";
+      pantallaSiguiente.style.display="block";
+    }
+
+    function irAPuntuacion(){
+      var pantallaActual=document.getElementById("pantallaJuego4");
+      var pantallaSiguiente=document.getElementById("pantallaPuntuacion");
+      pantallaActual.style.display="none";
+      pantallaSiguiente.style.display="block";
+    }
+
+    function jugarOtraVez(){
+      var pantallaActual=document.getElementById("pantallaPuntuacion");
+      var pantallaSiguiente=document.getElementById("pantallaInicio");
+      pantallaActual.style.display="none";
+      pantallaSiguiente.style.display="block";
+    }
+
+    function terminarJuego3(){
+      var aciertos=0;
+
+      var marcada1=document.querySelector('input[name="respuestaPregunta1Juego3"]:checked');
+      if(marcada1!==null&&marcada1.value===nombreElegido){
+        aciertos=aciertos+1;
+      }
+
+      var marcada2=document.querySelector('input[name="respuestaPregunta2Juego3"]:checked');
+      if(marcada2!==null&&marcada2.value===edadElegida){
+        aciertos=aciertos+1;
+      }
+
+      var marcada3=document.querySelector('input[name="respuestaPregunta3Juego3"]:checked');
+      if(marcada3!==null&&marcada3.value===ciudadElegida){
+        aciertos=aciertos+1;
+      }
+
+      var marcada4=document.querySelector('input[name="respuestaPregunta4Juego3"]:checked');
+      if(marcada4!==null&&marcada4.value===precioElegido){
+        aciertos=aciertos+1;
+      }
+
+      document.getElementById("correctasJuego3").textContent=aciertos;
+      irAExplicacion4();
+    }
+
+  </script>
+
+</body>
+</html>
