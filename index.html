@@ -169,8 +169,12 @@
       <p>Correctas: <span id="correctasJuego4">0</span> de <span id="totalJuego4">3</span></p>
     </div>
 
-    <button id="botonGuardar">Guardar puntuación</button>
+    <button id="botonGuardar" onclick="guardarPuntuacion()">Guardar puntuación</button>
     <button onclick="jugarOtraVez()">¿Jugamos de nuevo?</button>
+    <p id="mensajeGuardado"></p>
+    <h2>Puntuaciones guardadas</h2>
+    <ul id="listaPartidas"></ul>
+    <p>Puedes empezar otra partida. Si recargas la página, se borrarán las puntuaciones 	guardadas.</p>
   </div>
 
   <script>
@@ -195,6 +199,9 @@
     var prohibePulsarMasCartas=false;
     var intentosRealizados=0;
     var parejasEncontradas=0;
+    var horaInicioLectura=0;
+    var segundosLectura=0;
+    var partidasGuardadas=[];
 
     function numeroAleatorio(maximo){
       return Math.floor(Math.random()*maximo);
@@ -370,6 +377,23 @@ function terminarJuego2(){
       irAPuntuacion();
     }
 
+        function guardarPuntuacion(){
+      var numeroPartida=partidasGuardadas.length+1;
+            var resumen="Partida "+numeroPartida+": Juego 1, "+segundosLectura+" segundos / Juego 2, "+intentosRealizados+" intentos / Juego 3, "+document.getElementById("correctasJuego3").textContent+" de 4 / Juego 4, "+document.getElementById("correctasJuego4").textContent+" de 3.";
+      partidasGuardadas.push(resumen);
+      mostrarPartidasGuardadas();
+      document.getElementById("mensajeGuardado").textContent="Puntuación guardada";
+      document.getElementById("botonGuardar").disabled=true;
+    }
+
+    function mostrarPartidasGuardadas(){
+      var contenido="";
+      for(var i=0;i<partidasGuardadas.length;i=i+1){
+        contenido=contenido+"<li>"+partidasGuardadas[i]+"</li>";
+      }
+      document.getElementById("listaPartidas").innerHTML=contenido;
+    }
+
     function irAExplicacion1(){
       var pantallaActual=document.getElementById("pantallaInicio");
       var pantallaSiguiente=document.getElementById("pantallaExplicacion1");
@@ -379,6 +403,7 @@ function terminarJuego2(){
 
     function irAJuego1(){
       generarTextoJuego1();
+      horaInicioLectura=Date.now();
       var pantallaActual=document.getElementById("pantallaExplicacion1");
       var pantallaSiguiente=document.getElementById("pantallaJuego1");
       pantallaActual.style.display="none";
@@ -386,6 +411,8 @@ function terminarJuego2(){
     }
 
     function irAExplicacion2(){
+      segundosLectura=Math.round((Date.now()-horaInicioLectura)/1000);
+      document.getElementById("tiempoJuego1").textContent=segundosLectura;
       var pantallaActual=document.getElementById("pantallaJuego1");
       var pantallaSiguiente=document.getElementById("pantallaExplicacion2");
       pantallaActual.style.display="none";
@@ -438,6 +465,8 @@ function terminarJuego2(){
     }
 
     function jugarOtraVez(){
+      document.getElementById("botonGuardar").disabled=false;
+      document.getElementById("mensajeGuardado").textContent="";
       var pantallaActual=document.getElementById("pantallaPuntuacion");
       var pantallaSiguiente=document.getElementById("pantallaInicio");
       pantallaActual.style.display="none";
